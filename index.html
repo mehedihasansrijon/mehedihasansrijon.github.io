@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehedi Hasan Srijon - Android App Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Body Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fc;
+            color: #333;
+            text-align: center;
+        }
+
+        .container {
+            padding: 40px;
+        }
+
+        /* Content Box */
+        .content {
+            margin: 20px auto;
+            padding: 40px;
+            background-color: #ffffff;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            width: 85%;
+            border-radius: 15px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .content:hover {
+            transform: scale(1.03);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #e74c3c; /* Red */
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .section-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            color: #333;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header h2 {
+            font-size: 2.5rem;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+
+        .profile-pic {
+            border-radius: 50%;
+            object-fit: cover;
+            width: 250px;
+            height: 250px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-out;
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.1);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 30px;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: #e74c3c;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: #c0392b;
+        }
+
+        /* Social Media Card */
+        .social-card {
+            margin-top: 40px;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .social-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.5rem;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .social-links a:hover {
+            color: #e74c3c;
+        }
+
+        /* Skills Section */
+        .skills-section {
+            margin-top: 40px;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+        }
+
+        .skill {
+            margin-bottom: 30px;
+            text-align: left;
+            width: 80%;
+            margin: 10px auto;
+        }
+
+        .skill-name {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            height: 20px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .progress {
+            height: 100%;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            line-height: 20px;
+            font-weight: bold;
+            transition: width 1s ease;
+        }
+
+        .ftco-section {
+    padding: 50px 0;
+    background-color: #f1f3f4;
+}
+
+.ftco-section h1, .ftco-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.ftco-section p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.project-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card img:hover {
+    transform: scale(1.1);
+}
+
+.project-card .text {
+    padding: 20px;
+}
+
+.project-card .text h3 {
+    font-size: 1.4rem;
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+.project-card .text p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.projects-grid .project-card a {
+    text-decoration: none;
+}
+
+/* Updated Colors for Projects Section */
+.heading-section h1.big {
+    font-size: 3rem;
+    color: #e74c3c; /* Bright Red */
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.heading-section h2 {
+    font-size: 2rem;
+    color: #2c3e50; /* Dark Grey */
+    margin-bottom: 15px;
+}
+
+.heading-section p {
+    font-size: 1.1rem;
+    color: #7f8c8d; /* Soft Grey */
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.social-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.interests-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.interest-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 20px;
+}
+
+.icon {
+    font-size: 2em;
+    margin-right: 10px;
+}
+
+p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Improved Colors for Profile Header */
+header h1 {
+    font-size: 3.5rem;
+    color: #2c3e50; /* Dark Grey */
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h2 {
+    font-size: 2.5rem;
+    color: #e74c3c; /* Red for emphasis */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#typing-animation {
+    color: #3498db; /* Blue for typing animation */
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* Profile Picture Hover Effect */
+.profile-pic {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-out;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+.personal-info {
+    margin-top: 40px;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.personal-info h2 {
+    font-size: 2rem;
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+.personal-info p {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.highlight-im {
+  color: #E91E63; /* Vibrant magenta for "I'm" */
+}
+
+.highlight-name {
+  color: #000000; /* Rich teal for "Mehedi Hasan Srijon" */
+}
+
+.java { background-color: #FF5733; }
+.kotlin { background-color: #7F52FF; }
+.xml { background-color: #3B3A36; }
+.html { background-color: #E34F26; }
+.php { background-color: #777BB3; }
+.dart { background-color: #00B4A0; }
+.python { background-color: #306998; }
+
+
+
+    </style>
+</head>
+<head>
+  <style>
+    header {
+      background-image: url('images/Cover.jpg'); /* Replace with your background image path */
+      background-size: cover; /* Ensures the image covers the entire header */
+      background-position: center; /* Centers the image */
+      color: white; /* Makes the text white for better visibility */
+      padding: 50px; /* Adds padding around the header content */
+      position: relative; /* Allows positioning of elements inside */
+      text-align: center; /* Ensures the profile picture is centered */
+    }
+    .text-content {
+      position: absolute; /* Positions the text content over the header */
+      top: 50%; /* Vertically centers the text */
+      left: 50px; /* Moves the text to the left */
+      transform: translateY(-50%); /* Centers the text vertically */
+      text-align: left; /* Aligns the text to the left */
+    }
+    h1, h2 {
+      margin: 0; /* Removes default margins */
+    }
+    h1 {
+      font-size: 2.5em; /* Adjusts the size of the main heading */
+    }
+    h2 {
+      font-size: 1.5em; /* Adjusts the size of the subheading */
+    }
+    .profile-pic {
+      margin-top: 20px; /* Adds space between the image and the header */
+      border-radius: 50%; /* Makes the image circular */
+      width: 150px; /* Adjust the size of the profile picture */
+      height: 150px;
+      object-fit: cover; /* Ensures the image fits nicely in the circular frame */
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="text-content">
+      <h1>Hi there 🙋‍♂️</h1>
+      <h2><span class="highlight-im">I'm</span> <span class="highlight-name">Mehedi Hasan Srijon</span> - <span id="typing-animation"></span></h2>
+    </div>
+    <img class="profile-pic" src="images/Profile Picture.jpg" alt="Mehedi Hasan Srijon">
+  </header>
+
+  <script>
+    const typingTexts = [
+      'a Developer 👨‍💻',
+      'a Designer 🎨',
+      'a Student 📚',
+      'a Traveller ✈️',
+      'a Coffee Lover ☕'
+    ];
+
+    const typingAnimationElement = document.getElementById('typing-animation');
+    let textIndex = 0;
+    let charIndex = 0;
+
+    function type() {
+      if (charIndex < typingTexts[textIndex].length) {
+        typingAnimationElement.textContent += typingTexts[textIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, 100); // Adjust typing speed here (100ms per character)
+      } else {
+        setTimeout(erase, 2000); // Pause before erasing
+      }
+    }
+
+    function erase() {
+      if (charIndex > 0) {
+        typingAnimationElement.textContent = typingAnimationElement.textContent.slice(0, -1);
+        charIndex--;
+        setTimeout(erase, 50); // Adjust erasing speed here (50ms per character)
+      } else {
+        textIndex = (textIndex + 1) % typingTexts.length; // Move to the next text
+        setTimeout(type, 500); // Pause before typing the next text
+      }
+    }
+
+    // Start the typing animation
+    document.addEventListener('DOMContentLoaded', () => {
+      type();
+    });
+  </script>
+
+<body>
+    <!-- About Section -->
+    <div class="social-card">
+      <h2 class="section-title">Profile</h2>
+      <p class="section-text">
+        Hi! I'm Mehedi Hasan Srijon, an Android App Developer with 3+ years of experience in Java programming. 
+        I have a passion for building user-friendly mobile apps with modern technologies like Firebase, MySQL, and SQLite.
+      </p>
+    </div>
+    
+    <div class="social-card">
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="section-text">
+        Innovative and dedicated Android App Developer with proven expertise in designing, developing, and deploying high-quality mobile applications. 
+        I specialize in creating seamless and engaging user experiences while leveraging Firebase, MySQL, and SQLite for backend development.
+      </p>
+    </div>
+
+<!-- Technical Skills Section -->
+<div class="social-card">
+  <h2 class="section-title">Technical Skills 🤹🏻</h2>
+  <div class="skills-row">
+      <div class="skill-item">
+          <h3>Programming Languages</h3>
+          <p><strong>Java</strong>, <strong>PHP</strong>, <strong>Python</strong>, <strong>Dart</strong></p>
+      </div>
+      <div class="skill-item">
+          <h3>Frontend Development</h3>
+          <p><strong>XML</strong>, <strong>HTML</strong></p>
+      </div>
+      <div class="skill-item">
+          <h3>Backend Technologies</h3>
+          <p><strong>Firebase</strong>, <strong>MySQL</strong>, <strong>SQLite</strong></p>
+      </div>
+      <div class="skill-item">
+          <h3>Tools & IDEs</h3>
+          <p><strong>Android Studio</strong>, <strong>Git</strong>, <strong>VSCode</strong></p>
+      </div>
+  </div>
+</div>
+
+<!-- CSS to style the row layout -->
+<style>
+  .skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .skill-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 22%; /* Adjust the width for responsiveness */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .skill-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .skill-item h3 {
+    font-size: 1.3rem;
+    color: #e74c3c; /* Red for emphasis */
+    margin-bottom: 10px;
+  }
+
+  .skill-item p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+
+  /* Make the layout responsive */
+  @media (max-width: 800px) {
+    .skill-item {
+      width: 45%; /* 2 items per row on medium screens */
+    }
+  }
+
+  @media (max-width: 500px) {
+    .skill-item {
+      width: 100%; /* 1 item per row on small screens */
+    }
+  }
+</style>
+
+    <!-- Social Media Links Card -->
+    <div class="social-card">
+        <h3 class="section-title">Connect With Me</h3>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/mehedihasansrijon" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="https://github.com/mehedihasansrijon" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://www.facebook.com/mehedihasansrijon0" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+          <a href="https://www.instagram.com/mehedihasansrijon" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="https://wa.link/hzqwtf" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="skills-section">
+        <h2 class="section-title">Skills</h2>
+
+        <!-- Java Skill -->
+        <div class="skill">
+            <div class="skill-name">Java</div>
+            <div class="progress-bar">
+                <div class="progress java" style="width: 85%;">85%</div>
+            </div>
+        </div>
+
+        <!-- XML Skill -->
+        <div class="skill">
+            <div class="skill-name">XML</div>
+            <div class="progress-bar">
+                <div class="progress xml" style="width: 92%;">92%</div>
+            </div>
+        </div>
+
+        <!-- HTML Skill -->
+        <div class="skill">
+            <div class="skill-name">HTML</div>
+            <div class="progress-bar">
+                <div class="progress html" style="width: 35%;">35%</div>
+            </div>
+        </div>
+
+        <!-- PHP Skill -->
+        <div class="skill">
+            <div class="skill-name">PHP</div>
+            <div class="progress-bar">
+                <div class="progress php" style="width: 77%;">77%</div>
+            </div>
+        </div>
+
+        <!-- Dart Skill -->
+<div class="skill">
+  <div class="skill-name">Dart</div>
+  <div class="progress-bar">
+      <div class="progress dart" style="width: 83%;">83%</div>
+  </div>
+</div>
+
+<!-- Python Skill -->
+<div class="skill">
+  <div class="skill-name">Python</div>
+  <div class="progress-bar">
+      <div class="progress python" style="width: 45%;">45%</div>
+  </div>
+</div>
+    </div>
+</div>
+
+<div class="social-card">
+  <h2 class="section-title">Interests & Hobbies</h2>
+  <div class="interests-list">
+    <div class="interest-item">
+      <span class="icon">💻</span>
+      <p>Coding & Learning</p>
+  </div>
+    <div class="interest-item">
+      <span class="icon">🚀</span>
+      <p>Technology</p>
+  </div>
+    <div class="interest-item">
+      <span class="icon">🌱</span>
+      <p>Nature</p>
+  </div>
+    <div class="interest-item">
+          <span class="icon">☕</span>
+          <p>Coffee</p>
+      </div>
+      <div class="interest-item">
+          <span class="icon">🎮</span>
+          <p>Gaming</p>
+      </div>
+      <div class="interest-item">
+          <span class="icon">🎬</span>
+          <p>Video Editing</p>
+      </div>
+      <div class="interest-item">
+          <span class="icon">🎶</span>
+          <p>Music</p>
+      </div>
+      <div class="interest-item">
+          <span class="icon">✈️</span>
+          <p>Traveling</p>
+      </div>
+      <div class="interest-item">
+          <span class="icon">📚</span>
+          <p>Reading Books</p>
+      </div>
+  </div>
+</div>
+
+
+<!-- Project Section -->
+<section class="ftco-section" id="project-section">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-5">
+      <div class="col-md-7 heading-section text-center">
+        <h1 class="big">Projects</h1>
+        <h2>Recent Demo Projects</h2>
+        <p>Here are some of my most recent demo projects showcasing my Android and Web development skills.</p>
+      </div>
+    </div>
+
+    <!-- Projects in Grid Layout -->
+    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4">
+      <!-- Project: Android-Cryptography -->
+      <div class="col">
+        <div class="project-card">
+          <a href="https://github.com/mehedihasansrijon/Android-Cryptography" class="zoom-effect" target="_blank">
+            <img src="images/Android-Cryptography.png" alt="Android-Cryptography App" class="img-fluid project-image">
+          </a>
+          <div class="text">
+            <h3><a href="https://github.com/mehedihasansrijon/Android-Cryptography" target="_blank">Android-Cryptography</a></h3>
+            <p>Cryptography is a secure Android application that allows users to encode and decode messages using advanced cryptographic techniques.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project: Authentic Love -->
+      <div class="col">
+        <div class="project-card">
+          <a href="https://github.com/mehedihasansrijon/authentic-love" class="zoom-effect" target="_blank">
+            <img src="images/Authentic Love.jpeg" alt="Authentic Love App" class="img-fluid project-image">
+          </a>
+          <div class="text">
+            <h3><a href="https://github.com/mehedihasansrijon/authentic-love" target="_blank">Authentic Love</a></h3>
+            <p>Authentic Love is an Android app that helps users categorize and identify meaningful relationships in their lives.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project: Academic Boi -->
+      <div class="col">
+        <div class="project-card">
+          <a href="https://github.com/mehedihasansrijon/Academic-Boi" class="zoom-effect" target="_blank">
+            <img src="images/Academic Boi.jpg" alt="Academic Boi App" class="img-fluid project-image">
+          </a>
+          <div class="text">
+            <h3><a href="https://github.com/mehedihasansrijon/Academic-Boi" target="_blank">Academic Boi</a></h3>
+            <p>Academic Boi is a rich ebook reader app designed for students in Bangladesh. It provides easy access to all textbooks from Class 1 to 12.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project: Arabic-Bangla Dictionary -->
+      <div class="col">
+        <div class="project-card">
+          <a href="https://github.com/mehedihasansrijon/Arabic-Bangla-Dictionary" class="zoom-effect" target="_blank">
+            <img src="images/Arabic-Bangla Dictionary.jpg" alt="Arabic-Bangla Dictionary App" class="img-fluid project-image">
+          </a>
+          <div class="text">
+            <h3><a href="https://github.com/mehedihasansrijon/Arabic-Bangla-Dictionary" target="_blank">Arabic-Bangla Dictionary 📖</a></h3>
+            <p>Arabic-Bangla Dictionary is an offline app designed to look up the meanings of Arabic to Bangla and Bangla to Arabic words.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project: PHP Cryptography -->
+      <div class="col">
+        <div class="project-card">
+          <a href="https://github.com/mehedihasansrijon/PHP-Cryptography" class="zoom-effect" target="_blank">
+            <img src="images/PHP Cryptography.png" alt="PHP Cryptography" class="img-fluid project-image">
+          </a>
+          <div class="text">
+            <h3><a href="https://github.com/mehedihasansrijon/PHP-Cryptography" target="_blank">PHP Cryptography</a></h3>
+            <p>This PHP Cryptography project provides a set of tools for secure data encryption and decryption using various algorithms.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .project-image {
+    width: 100%;  /* Ensures image takes full width within its container */
+    height: 250px; /* Fixed height for the images to make them look consistent */
+    object-fit: cover; /* Ensures images fill their container without distortion */
+    border-radius: 10px; /* Rounded corners for a soft, modern look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  }
+
+  .project-card:hover .project-image {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow on hover */
+  }
+
+  .project-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow around the card */
+    transition: box-shadow 0.3s ease; /* Smooth shadow effect on hover */
+  }
+
+  .project-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  }
+
+  .text {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .text h3 a {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .text p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+  }
+
+  /* Grid styling */
+  .row-cols-md-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+    gap: 30px; /* Adjust the gap between items */
+  }
+
+  .row-cols-lg-5 {
+    grid-template-columns: repeat(5, 1fr); /* 5 columns on large screens */
+  }
+
+  .g-4 {
+    gap: 20px;
+  }
+
+  @media (max-width: 991px) {
+    .row-cols-md-3 {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+  }
+
+  @media (max-width: 767px) {
+    .row-cols-md-3 {
+      grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+  }
+</style>
+
+
+
+<style>
+    /* Grid Layout Styling */
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 4-5 items per row */
+        gap: 20px; /* Space between items */
+    }
+
+    .project-card {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .project-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .project-image {
+        width: 100%;
+        height: 200px; /* Uniform height for images */
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .project-card .text h3 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .project-card .text p {
+        font-size: 0.9rem;
+        color: #555;
+    }
+</style>
+
+<div class="personal-info">
+  <h2 class="section-title">About Me</h2>
+  <p class="section-text">
+      <strong>Developer & Student</strong> | Dreamer, Wanderlust, Honest | Passionate about <strong>Tech & Travel</strong> 📱✈️
+  </p>
+  <p class="section-text">
+      Committed to lifelong learning and embracing new challenges in the tech world. I love creating digital solutions that have a positive impact. 
+  </p>
+  <p class="section-text">
+      "Believe in the power of technology to change the world."
+  </p>
+</div>
+
+</body>
+</html>
