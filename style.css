@@ -1,0 +1,757 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc;
+    color: #333;
+    text-align: center;
+}
+
+.container {
+    padding: 40px;
+}
+
+/* Content Box */
+.content {
+    margin: 20px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    width: 85%;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.content:hover {
+    transform: scale(1.03);
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #e74c3c; /* Red */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.section-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h2 {
+    font-size: 2.5rem;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-out;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #e74c3c;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #c0392b;
+}
+
+/* Social Media Card */
+.social-card {
+    margin-top: 40px;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    color: #e74c3c;
+}
+
+/* Skills Section */
+.skills-section {
+    margin-top: 40px;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.skill {
+    margin-bottom: 30px;
+    text-align: left;
+    width: 80%;
+    margin: 10px auto;
+}
+
+.skill-name {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    height: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.progress {
+    height: 100%;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    font-weight: bold;
+    transition: width 1s ease;
+}
+
+.ftco-section {
+padding: 50px 0;
+background-color: #f1f3f4;
+}
+
+.ftco-section h1, .ftco-section h2 {
+font-size: 2.5rem;
+color: #333;
+text-transform: uppercase;
+font-weight: 700;
+}
+
+.ftco-section p {
+font-size: 1rem;
+color: #555;
+}
+
+.projects-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+gap: 25px;
+margin-top: 40px;
+}
+
+.project-card {
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+background-color: #ffffff;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+margin: 10px;
+}
+
+.project-card:hover {
+transform: scale(1.05);
+box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+width: 100%;
+height: auto;
+object-fit: cover;
+transition: transform 0.3s ease;
+}
+
+.project-card img:hover {
+transform: scale(1.1);
+}
+
+.project-card .text {
+padding: 20px;
+}
+
+.project-card .text h3 {
+font-size: 1.4rem;
+color: #e74c3c;
+margin-bottom: 15px;
+}
+
+.project-card .text p {
+font-size: 1rem;
+color: #555;
+}
+
+.projects-grid .project-card a {
+text-decoration: none;
+}
+
+/* Updated Colors for Projects Section */
+.heading-section h1.big {
+font-size: 3rem;
+color: #e74c3c; /* Bright Red */
+text-transform: uppercase;
+font-weight: 700;
+letter-spacing: 3px;
+}
+
+.heading-section h2 {
+font-size: 2rem;
+color: #2c3e50; /* Dark Grey */
+margin-bottom: 15px;
+}
+
+.heading-section p {
+font-size: 1.1rem;
+color: #7f8c8d; /* Soft Grey */
+line-height: 1.6;
+margin-bottom: 30px;
+}
+
+.social-card {
+background-color: #f9f9f9;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+font-size: 1.5em;
+margin-bottom: 15px;
+text-align: center;
+}
+
+.interests-list {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+
+.interest-item {
+display: flex;
+align-items: center;
+margin: 10px 20px;
+}
+
+.icon {
+font-size: 2em;
+margin-right: 10px;
+}
+
+p {
+font-size: 1.1em;
+color: #333;
+}
+
+/* Improved Colors for Profile Header */
+header h1 {
+font-size: 3.5rem;
+color: #2c3e50; /* Dark Grey */
+margin-bottom: 10px;
+text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h2 {
+font-size: 2.5rem;
+color: #e74c3c; /* Red for emphasis */
+margin-bottom: 20px;
+font-weight: bold;
+}
+
+#typing-animation {
+color: #3498db; /* Blue for typing animation */
+font-weight: bold;
+display: inline-block;
+}
+
+/* Profile Picture Hover Effect */
+.profile-pic {
+border-radius: 50%;
+object-fit: cover;
+width: 250px;
+height: 250px;
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease-out;
+}
+
+.profile-pic:hover {
+transform: scale(1.1);
+}
+
+.personal-info {
+margin-top: 40px;
+padding: 30px;
+background-color: #fff;
+box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+border-radius: 15px;
+text-align: center;
+}
+
+.personal-info h2 {
+font-size: 2rem;
+color: #e74c3c;
+margin-bottom: 15px;
+}
+
+.personal-info p {
+font-size: 1.2rem;
+color: #333;
+font-weight: 500;
+line-height: 1.6;
+}
+
+.highlight-im {
+color: #E91E63; /* Vibrant magenta for "I'm" */
+}
+
+.highlight-name {
+color: #000000; /* Rich teal for "Mehedi Hasan Srijon" */
+}
+
+/* General Styles */
+header {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+padding: 20px;
+}
+
+.profile-container {
+margin-bottom: 20px;
+}
+
+.profile-pic {
+width: 180px; /* Default size for the image */
+height: 180px;
+border-radius: 50%;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.text-content h1 {
+font-size: 2rem;
+margin-bottom: 10px;
+color: #FFF;
+}
+
+.text-content h2 {
+font-size: 1.5rem;
+color: #555;
+}
+
+.highlight-im {
+font-weight: bold;
+font-size: xx-large;
+color: #5eff00;
+}
+
+.highlight-name {
+font-weight: bold;
+font-size: xx-large;
+color: #ff5722;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.profile-pic {
+width: 120px; /* Reduce image size on smaller screens */
+height: 120px;
+}
+
+.text-content h1 {
+font-size: 1.8rem; /* Slightly smaller font size */
+}
+
+.text-content h2 {
+font-size: 1.2rem;
+}
+}
+
+@media (max-width: 480px) {
+header {
+padding: 15px;
+}
+
+.profile-pic {
+width: 100px; /* Further reduce image size on very small screens */
+height: 100px;
+}
+
+.text-content h1 {
+font-size: 1.5rem; /* Smaller font size for better fit */
+}
+
+.text-content h2 {
+font-size: 1rem;
+}
+}
+
+
+.java { background-color: #FF5733; }
+.kotlin { background-color: #7F52FF; }
+.xml { background-color: #3B3A36; }
+.html { background-color: #E34F26; }
+.php { background-color: #777BB3; }
+.dart { background-color: #00B4A0; }
+.python { background-color: #306998; }
+
+header {
+    background-image: url('images/Cover.jpg'); /* Replace with your background image path */
+    background-size: cover; /* Ensures the image covers the entire header */
+    background-position: center; /* Centers the image */
+    color: white; /* Makes the text white for better visibility */
+    padding: 50px; /* Adds padding around the header content */
+    position: relative; /* Allows positioning of elements inside */
+    text-align: center; /* Ensures the profile picture is centered */
+  }
+
+  .profile-container {
+    margin-bottom: 20px; /* Adds space below the profile picture */
+  }
+
+  .profile-pic {
+    border-radius: 50%; /* Makes the image circular */
+    width: 150px; /* Adjust the size of the profile picture */
+    height: 150px;
+    object-fit: cover; /* Ensures the image fits nicely in the circular frame */
+  }
+
+  .text-content {
+    text-align: center; /* Aligns text to the center */
+  }
+
+  h1, h2 {
+    margin: 0; /* Removes default margins */
+  }
+
+  h1 {
+    font-size: 2.5em; /* Adjusts the size of the main heading */
+  }
+
+  h2 {
+    font-size: 1.5em; /* Adjusts the size of the subheading */
+  }
+
+  /* Media Query for smaller screens */
+  @media (max-width: 768px) {
+    header {
+      padding: 30px; /* Reduces padding for smaller screens */
+    }
+
+    .text-content {
+      position: static; /* Makes the text flow below the image */
+      margin-top: 20px; /* Adds spacing above the text */
+    }
+
+    h1 {
+      font-size: 2em; /* Reduces font size for smaller screens */
+    }
+
+    h2 {
+      font-size: 1.2em; /* Reduces font size for smaller screens */
+    }
+
+    .profile-pic {
+      width: 120px; /* Reduces the size of the profile picture */
+      height: 120px;
+    }
+  }
+  
+  .skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .skill-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 22%; /* Adjust the width for responsiveness */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .skill-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .skill-item h3 {
+    font-size: 1.3rem;
+    color: #e74c3c; /* Red for emphasis */
+    margin-bottom: 10px;
+  }
+
+  .skill-item p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+
+  /* Make the layout responsive */
+  @media (max-width: 800px) {
+    .skill-item {
+      width: 45%; /* 2 items per row on medium screens */
+    }
+  }
+
+  @media (max-width: 500px) {
+    .skill-item {
+      width: 100%; /* 1 item per row on small screens */
+    }
+  }
+  
+  .slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    position: relative;
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.description {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    font-size: 18px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.description {
+    animation: fadeIn 2s ease-in-out;
+}
+
+
+ .project-image {
+    width: 100%;  /* Ensures image takes full width within its container */
+    height: 250px; /* Fixed height for the images to make them look consistent */
+    object-fit: cover; /* Ensures images fill their container without distortion */
+    border-radius: 10px; /* Rounded corners for a soft, modern look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  }
+
+  .project-card:hover .project-image {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow on hover */
+  }
+
+  .project-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow around the card */
+    transition: box-shadow 0.3s ease; /* Smooth shadow effect on hover */
+  }
+
+  .project-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  }
+
+  .text {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .text h3 a {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .text p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+  }
+
+  /* Grid styling */
+  .row-cols-md-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+    gap: 30px; /* Adjust the gap between items */
+  }
+
+  .row-cols-lg-5 {
+    grid-template-columns: repeat(5, 1fr); /* 5 columns on large screens */
+  }
+
+  .g-4 {
+    gap: 20px;
+  }
+
+  @media (max-width: 991px) {
+    .row-cols-md-3 {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+  }
+
+  @media (max-width: 767px) {
+    .row-cols-md-3 {
+      grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 4-5 items per row */
+    gap: 20px; /* Space between items */
+}
+
+.project-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px; /* Uniform height for images */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.project-card .text h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.project-card .text p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Vertical Split Image Slideshow Styles */
+/* Vertical Split Image Slideshow Styles */
+.vertical-split-slider {
+  position: relative;
+  width: 100%;
+  height: 450px; /* Set a fixed height for the slider */
+  overflow: hidden;
+  margin: 20px auto;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for a card effect */
+}
+
+.split-slider-container {
+  display: flex;
+  flex-direction: row; /* Horizontal layout */
+  height: 100%;
+  width: 100%; /* Container width should fit the content */
+  animation: slideHorizontal 30s infinite linear; /* Infinite loop with constant speed */
+  animation-timing-function: linear; /* Constant speed */
+  overflow: hidden; /* Prevent overflow during animation */
+}
+
+.split-slide {
+  position: relative;
+  width: 100%; /* Ensures slides take up full width */
+}
+
+.split-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire space without stretching */
+  transition: transform 0.5s ease-in-out;
+}
+
+.description {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+/* Continuous Horizontal Slide Animation */
+@keyframes slideHorizontal {
+  0% {
+    transform: translateX(0); /* Start at the first image */
+  }
+  99.99% {
+    transform: translateX(-100%); /* Move to the last image */
+  }
+  100% {
+    transform: translateX(0); /* Loop back to the first image */
+  }
+}

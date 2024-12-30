@@ -5,467 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mehedi Hasan Srijon - Android App Developer</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome CDN for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* Body Styles */
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f9fc;
-            color: #333;
-            text-align: center;
-        }
-
-        .container {
-            padding: 40px;
-        }
-
-        /* Content Box */
-        .content {
-            margin: 20px auto;
-            padding: 40px;
-            background-color: #ffffff;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-            width: 85%;
-            border-radius: 15px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .content:hover {
-            transform: scale(1.03);
-        }
-
-        .section-title {
-            font-size: 2rem;
-            color: #e74c3c; /* Red */
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: 2px;
-        }
-
-        .section-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 20px;
-            color: #555;
-        }
-
-        header {
-            margin-bottom: 40px;
-        }
-
-        header h1 {
-            font-size: 3.5rem;
-            color: #333;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        header h2 {
-            font-size: 2.5rem;
-            color: #e74c3c;
-            margin-bottom: 20px;
-        }
-
-        .profile-pic {
-            border-radius: 50%;
-            object-fit: cover;
-            width: 250px;
-            height: 250px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-out;
-        }
-
-        .profile-pic:hover {
-            transform: scale(1.1);
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 14px 30px;
-            font-size: 1.2rem;
-            color: #fff;
-            background-color: #e74c3c;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: background-color 0.3s ease-in-out;
-        }
-
-        .btn:hover {
-            background-color: #c0392b;
-        }
-
-        /* Social Media Card */
-        .social-card {
-            margin-top: 40px;
-            padding: 30px;
-            background-color: #fff;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-            border-radius: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .social-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .social-links {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .social-links a {
-            text-decoration: none;
-            color: #333;
-            font-size: 1.5rem;
-            transition: color 0.3s ease-in-out;
-        }
-
-        .social-links a:hover {
-            color: #e74c3c;
-        }
-
-        /* Skills Section */
-        .skills-section {
-            margin-top: 40px;
-            padding: 30px;
-            background-color: #fff;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-            border-radius: 15px;
-        }
-
-        .skill {
-            margin-bottom: 30px;
-            text-align: left;
-            width: 80%;
-            margin: 10px auto;
-        }
-
-        .skill-name {
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-        }
-
-        .progress-bar {
-            width: 100%;
-            background-color: #e0e0e0;
-            border-radius: 10px;
-            height: 20px;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .progress {
-            height: 100%;
-            border-radius: 10px;
-            color: white;
-            text-align: center;
-            line-height: 20px;
-            font-weight: bold;
-            transition: width 1s ease;
-        }
-
-        .ftco-section {
-    padding: 50px 0;
-    background-color: #f1f3f4;
-}
-
-.ftco-section h1, .ftco-section h2 {
-    font-size: 2.5rem;
-    color: #333;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
-.ftco-section p {
-    font-size: 1rem;
-    color: #555;
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 25px;
-    margin-top: 40px;
-}
-
-.project-card {
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 10px;
-}
-
-.project-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-}
-
-.project-card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.project-card img:hover {
-    transform: scale(1.1);
-}
-
-.project-card .text {
-    padding: 20px;
-}
-
-.project-card .text h3 {
-    font-size: 1.4rem;
-    color: #e74c3c;
-    margin-bottom: 15px;
-}
-
-.project-card .text p {
-    font-size: 1rem;
-    color: #555;
-}
-
-.projects-grid .project-card a {
-    text-decoration: none;
-}
-
-/* Updated Colors for Projects Section */
-.heading-section h1.big {
-    font-size: 3rem;
-    color: #e74c3c; /* Bright Red */
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 3px;
-}
-
-.heading-section h2 {
-    font-size: 2rem;
-    color: #2c3e50; /* Dark Grey */
-    margin-bottom: 15px;
-}
-
-.heading-section p {
-    font-size: 1.1rem;
-    color: #7f8c8d; /* Soft Grey */
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
-
-.social-card {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.section-title {
-    font-size: 1.5em;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.interests-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.interest-item {
-    display: flex;
-    align-items: center;
-    margin: 10px 20px;
-}
-
-.icon {
-    font-size: 2em;
-    margin-right: 10px;
-}
-
-p {
-    font-size: 1.1em;
-    color: #333;
-}
-
-/* Improved Colors for Profile Header */
-header h1 {
-    font-size: 3.5rem;
-    color: #2c3e50; /* Dark Grey */
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-header h2 {
-    font-size: 2.5rem;
-    color: #e74c3c; /* Red for emphasis */
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-#typing-animation {
-    color: #3498db; /* Blue for typing animation */
-    font-weight: bold;
-    display: inline-block;
-}
-
-/* Profile Picture Hover Effect */
-.profile-pic {
-    border-radius: 50%;
-    object-fit: cover;
-    width: 250px;
-    height: 250px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-out;
-}
-
-.profile-pic:hover {
-    transform: scale(1.1);
-}
-
-.personal-info {
-    margin-top: 40px;
-    padding: 30px;
-    background-color: #fff;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    text-align: center;
-}
-
-.personal-info h2 {
-    font-size: 2rem;
-    color: #e74c3c;
-    margin-bottom: 15px;
-}
-
-.personal-info p {
-    font-size: 1.2rem;
-    color: #333;
-    font-weight: 500;
-    line-height: 1.6;
-}
-
-.highlight-im {
-  color: #E91E63; /* Vibrant magenta for "I'm" */
-}
-
-.highlight-name {
-  color: #000000; /* Rich teal for "Mehedi Hasan Srijon" */
-}
-
-.java { background-color: #FF5733; }
-.kotlin { background-color: #7F52FF; }
-.xml { background-color: #3B3A36; }
-.html { background-color: #E34F26; }
-.php { background-color: #777BB3; }
-.dart { background-color: #00B4A0; }
-.python { background-color: #306998; }
-
-
-
-    </style>
-</head>
+    <link rel="stylesheet" href="style.css">
+  </head>
 <head>
-  <style>
-    header {
-      background-image: url('images/Cover.jpg'); /* Replace with your background image path */
-      background-size: cover; /* Ensures the image covers the entire header */
-      background-position: center; /* Centers the image */
-      color: white; /* Makes the text white for better visibility */
-      padding: 50px; /* Adds padding around the header content */
-      position: relative; /* Allows positioning of elements inside */
-      text-align: center; /* Ensures the profile picture is centered */
-    }
-    .text-content {
-      position: absolute; /* Positions the text content over the header */
-      top: 50%; /* Vertically centers the text */
-      left: 50px; /* Moves the text to the left */
-      transform: translateY(-50%); /* Centers the text vertically */
-      text-align: left; /* Aligns the text to the left */
-    }
-    h1, h2 {
-      margin: 0; /* Removes default margins */
-    }
-    h1 {
-      font-size: 2.5em; /* Adjusts the size of the main heading */
-    }
-    h2 {
-      font-size: 1.5em; /* Adjusts the size of the subheading */
-    }
-    .profile-pic {
-      margin-top: 20px; /* Adds space between the image and the header */
-      border-radius: 50%; /* Makes the image circular */
-      width: 150px; /* Adjust the size of the profile picture */
-      height: 150px;
-      object-fit: cover; /* Ensures the image fits nicely in the circular frame */
-    }
-  </style>
-</head>
-
-<body>
-  <header>
-    <div class="text-content">
-      <h1>Hi there 🙋‍♂️</h1>
-      <h2><span class="highlight-im">I'm</span> <span class="highlight-name">Mehedi Hasan Srijon</span> - <span id="typing-animation"></span></h2>
-    </div>
-    <img class="profile-pic" src="images/Profile Picture.jpg" alt="Mehedi Hasan Srijon">
-  </header>
-
-  <script>
-    const typingTexts = [
-      'a Developer 👨‍💻',
-      'a Designer 🎨',
-      'a Student 📚',
-      'a Traveller ✈️',
-      'a Coffee Lover ☕'
-    ];
-
-    const typingAnimationElement = document.getElementById('typing-animation');
-    let textIndex = 0;
-    let charIndex = 0;
-
-    function type() {
-      if (charIndex < typingTexts[textIndex].length) {
-        typingAnimationElement.textContent += typingTexts[textIndex].charAt(charIndex);
-        charIndex++;
-        setTimeout(type, 100); // Adjust typing speed here (100ms per character)
-      } else {
-        setTimeout(erase, 2000); // Pause before erasing
+  <body>
+    <header>
+      <div class="profile-container">
+        <img class="profile-pic" src="images/Profile Picture.jpg" alt="Mehedi Hasan Srijon">
+      </div>
+      <div class="text-content">
+        <h1>Hi there 🙋‍♂️</h1>
+        <h2>
+          <span class="highlight-im">I'm</span>
+          <span class="highlight-name">Mehedi Hasan Srijon</span> - 
+          <span id="typing-animation"></span>
+        </h2>
+      </div>
+    </header>
+  
+    <script>
+      const typingTexts = [
+        'a Developer 👨‍💻',
+        'a Designer 🎨',
+        'a Student 📚',
+        'a Traveller ✈️',
+        'a Coffee Lover ☕'
+      ];
+  
+      const typingAnimationElement = document.getElementById('typing-animation');
+      let textIndex = 0;
+      let charIndex = 0;
+  
+      function type() {
+        if (charIndex < typingTexts[textIndex].length) {
+          typingAnimationElement.textContent += typingTexts[textIndex].charAt(charIndex);
+          charIndex++;
+          setTimeout(type, 100); // Adjust typing speed here (100ms per character)
+        } else {
+          setTimeout(erase, 2000); // Pause before erasing
+        }
       }
-    }
-
-    function erase() {
-      if (charIndex > 0) {
-        typingAnimationElement.textContent = typingAnimationElement.textContent.slice(0, -1);
-        charIndex--;
-        setTimeout(erase, 50); // Adjust erasing speed here (50ms per character)
-      } else {
-        textIndex = (textIndex + 1) % typingTexts.length; // Move to the next text
-        setTimeout(type, 500); // Pause before typing the next text
+  
+      function erase() {
+        if (charIndex > 0) {
+          typingAnimationElement.textContent = typingAnimationElement.textContent.slice(0, -1);
+          charIndex--;
+          setTimeout(erase, 50); // Adjust erasing speed here (50ms per character)
+        } else {
+          textIndex = (textIndex + 1) % typingTexts.length; // Move to the next text
+          setTimeout(type, 500); // Pause before typing the next text
+        }
       }
-    }
-
-    // Start the typing animation
-    document.addEventListener('DOMContentLoaded', () => {
-      type();
-    });
-  </script>
+  
+      // Start the typing animation
+      document.addEventListener('DOMContentLoaded', () => {
+        type();
+      });
+    </script>
 
 <body>
     <!-- About Section -->
-    <div class="social-card">
+    <div class="project-card">
       <h2 class="section-title">Profile</h2>
       <p class="section-text">
         Hi! I'm Mehedi Hasan Srijon, an Android App Developer with 3+ years of experience in Java programming. 
@@ -473,7 +74,7 @@ header h2 {
       </p>
     </div>
     
-    <div class="social-card">
+    <div class="project-card">
       <h2 class="section-title">Professional Summary</h2>
       <p class="section-text">
         Innovative and dedicated Android App Developer with proven expertise in designing, developing, and deploying high-quality mobile applications. 
@@ -481,8 +82,64 @@ header h2 {
       </p>
     </div>
 
+<!-- My Achievements Section -->
+<div class="project-card">
+  <div class="vertical-split-slider">
+    <div class="split-slider-container">
+      
+      <div class="split-slide">
+        <img src="images/Masud Rana Bhaiya.jpg" alt="Image 1">
+        <div class="description">
+          অষ্টম শ্রেনীতে পড়া এক কিশোর মেহেদি হাসান। আমার চুয়াডাঙ্গা জেলার সন্তান। কারো দ্বারা অনুপ্রাণিত না হয়েই, নিজের উদ্ভাবনী চিন্তাশক্তি ও দক্ষতা দিয়ে গড়েছে #চুয়াডাঙ্গা_অনলাইন_সেবা_অ্যাপস।
+        </div>
+      </div>
+      
+      <div class="split-slide">
+        <img src="images/Kutubpur High School.jpg" alt="Image 2">
+        <div class="description">
+          চুয়াডাঙ্গা সদরের কুতুবপুর মাধ্যমিক বিদ্যালয়ের ৮ম শ্রেণির শিক্ষার্থী মেহেদী হাসান "Chuadanga Online Sheba" নামক এপ তৈরি করায় স্কুলের পক্ষ থেকে সংবর্ধনা জানানো হয়। এ এপসের মাধ্যমে জানা যাবে চুয়াডাঙ্গার ঐতিহাসিক স্থান সমুহ, বিভিন্ন জরুরি প্রতিষ্ঠানের ফোন নম্বর সমূহ, আবাসিক হোটেল,  খাবার হোটেল, রক্তদান সংগঠন,  ডাক্তার, সাংবাদিক,  উকিল সহ নানা তথ্য। মেহেদীর এ কৃতিত্বের জন্য অফুরন্ত দোয়া রইল।
+        </div>
+      </div>
+
+      <div class="split-slide">
+        <img src="images/Akash Khobor News.jpg" alt="Image 3">
+        <div class="description">
+          কুতুবপুর মাধ্যমিক বিদ্যালয়ের অষ্টম শ্রেণীর ছাত্র, সত্যি সাহসী একটি ছেলে, অল্প বয়সে এমন ধারণা..!
+        </div>
+      </div>
+
+      <div class="split-slide">
+        <img src="images/Gorbo Bangladesh News.jpg" alt="Image 4">
+        <div class="description">
+          কুতুবপুর মাধ্যমিক বিদ্যালয়ের অষ্টম শ্রেণীর ছাত্র, সত্যি সাহসী একটি ছেলে, অল্প বয়সে এমন ধারণা..!
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Include JavaScript for Automatic Sliding -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector(".slider");
+    let index = 0;
+
+    function slideShow() {
+      const totalSlides = document.querySelectorAll(".slide").length;
+      index = (index + 1) % totalSlides; // Increment index in a loop
+      slider.style.transform = `translateX(-${index * 100}%)`; // Move to the next slide
+    }
+
+    // Set automatic sliding every 3 seconds
+    setInterval(slideShow, 3000);
+  });
+</script>
+
+</body>
+
 <!-- Technical Skills Section -->
-<div class="social-card">
+<div class="project-card">
   <h2 class="section-title">Technical Skills 🤹🏻</h2>
   <div class="skills-row">
       <div class="skill-item">
@@ -504,56 +161,8 @@ header h2 {
   </div>
 </div>
 
-<!-- CSS to style the row layout -->
-<style>
-  .skills-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-  }
-
-  .skill-item {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    width: 22%; /* Adjust the width for responsiveness */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .skill-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-  }
-
-  .skill-item h3 {
-    font-size: 1.3rem;
-    color: #e74c3c; /* Red for emphasis */
-    margin-bottom: 10px;
-  }
-
-  .skill-item p {
-    font-size: 1.1rem;
-    color: #555;
-  }
-
-  /* Make the layout responsive */
-  @media (max-width: 800px) {
-    .skill-item {
-      width: 45%; /* 2 items per row on medium screens */
-    }
-  }
-
-  @media (max-width: 500px) {
-    .skill-item {
-      width: 100%; /* 1 item per row on small screens */
-    }
-  }
-</style>
-
     <!-- Social Media Links Card -->
-    <div class="social-card">
+    <div class="project-card">
         <h3 class="section-title">Connect With Me</h3>
         <div class="social-links">
           <a href="https://www.linkedin.com/in/mehedihasansrijon" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
@@ -565,11 +174,11 @@ header h2 {
     </div>
 
     <!-- Skills Section -->
-    <div class="skills-section">
+    <div class="project-card">
         <h2 class="section-title">Skills</h2>
 
         <!-- Java Skill -->
-        <div class="skill">
+        <div class="project-card">
             <div class="skill-name">Java</div>
             <div class="progress-bar">
                 <div class="progress java" style="width: 85%;">85%</div>
@@ -577,31 +186,31 @@ header h2 {
         </div>
 
         <!-- XML Skill -->
-        <div class="skill">
-            <div class="skill-name">XML</div>
+        <div class="project-card">
+          <div class="skill-name">XML</div>
             <div class="progress-bar">
                 <div class="progress xml" style="width: 92%;">92%</div>
             </div>
         </div>
 
         <!-- HTML Skill -->
-        <div class="skill">
-            <div class="skill-name">HTML</div>
+        <div class="project-card">
+          <div class="skill-name">HTML</div>
             <div class="progress-bar">
                 <div class="progress html" style="width: 35%;">35%</div>
             </div>
         </div>
 
         <!-- PHP Skill -->
-        <div class="skill">
-            <div class="skill-name">PHP</div>
+        <div class="project-card">
+          <div class="skill-name">PHP</div>
             <div class="progress-bar">
                 <div class="progress php" style="width: 77%;">77%</div>
             </div>
         </div>
 
         <!-- Dart Skill -->
-<div class="skill">
+<div class="project-card">
   <div class="skill-name">Dart</div>
   <div class="progress-bar">
       <div class="progress dart" style="width: 83%;">83%</div>
@@ -609,7 +218,7 @@ header h2 {
 </div>
 
 <!-- Python Skill -->
-<div class="skill">
+<div class="project-card">
   <div class="skill-name">Python</div>
   <div class="progress-bar">
       <div class="progress python" style="width: 45%;">45%</div>
@@ -618,43 +227,43 @@ header h2 {
     </div>
 </div>
 
-<div class="social-card">
+<div class="project-card">
   <h2 class="section-title">Interests & Hobbies</h2>
   <div class="interests-list">
-    <div class="interest-item">
+    <div class="project-card">
       <span class="icon">💻</span>
       <p>Coding & Learning</p>
   </div>
-    <div class="interest-item">
-      <span class="icon">🚀</span>
+  <div class="project-card">
+    <span class="icon">🚀</span>
       <p>Technology</p>
   </div>
-    <div class="interest-item">
-      <span class="icon">🌱</span>
+  <div class="project-card">
+    <span class="icon">🌱</span>
       <p>Nature</p>
   </div>
-    <div class="interest-item">
-          <span class="icon">☕</span>
+  <div class="project-card">
+    <span class="icon">☕</span>
           <p>Coffee</p>
       </div>
-      <div class="interest-item">
-          <span class="icon">🎮</span>
+      <div class="project-card">
+        <span class="icon">🎮</span>
           <p>Gaming</p>
       </div>
-      <div class="interest-item">
-          <span class="icon">🎬</span>
+      <div class="project-card">
+        <span class="icon">🎬</span>
           <p>Video Editing</p>
       </div>
-      <div class="interest-item">
-          <span class="icon">🎶</span>
+      <div class="project-card">
+        <span class="icon">🎶</span>
           <p>Music</p>
       </div>
-      <div class="interest-item">
-          <span class="icon">✈️</span>
+      <div class="project-card">
+        <span class="icon">✈️</span>
           <p>Traveling</p>
       </div>
-      <div class="interest-item">
-          <span class="icon">📚</span>
+      <div class="project-card">
+        <span class="icon">📚</span>
           <p>Reading Books</p>
       </div>
   </div>
@@ -741,120 +350,6 @@ header h2 {
     </div>
   </div>
 </section>
-
-<style>
-  .project-image {
-    width: 100%;  /* Ensures image takes full width within its container */
-    height: 250px; /* Fixed height for the images to make them look consistent */
-    object-fit: cover; /* Ensures images fill their container without distortion */
-    border-radius: 10px; /* Rounded corners for a soft, modern look */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-  }
-
-  .project-card:hover .project-image {
-    transform: scale(1.05); /* Slight zoom effect */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow on hover */
-  }
-
-  .project-card {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow around the card */
-    transition: box-shadow 0.3s ease; /* Smooth shadow effect on hover */
-  }
-
-  .project-card:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
-  }
-
-  .text {
-    padding: 15px;
-    text-align: center;
-  }
-
-  .text h3 a {
-    font-size: 18px;
-    color: #333;
-    text-decoration: none;
-  }
-
-  .text p {
-    font-size: 14px;
-    color: #666;
-    margin-top: 10px;
-  }
-
-  /* Grid styling */
-  .row-cols-md-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
-    gap: 30px; /* Adjust the gap between items */
-  }
-
-  .row-cols-lg-5 {
-    grid-template-columns: repeat(5, 1fr); /* 5 columns on large screens */
-  }
-
-  .g-4 {
-    gap: 20px;
-  }
-
-  @media (max-width: 991px) {
-    .row-cols-md-3 {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
-    }
-  }
-
-  @media (max-width: 767px) {
-    .row-cols-md-3 {
-      grid-template-columns: 1fr; /* 1 column on small screens */
-    }
-  }
-</style>
-
-
-
-<style>
-    /* Grid Layout Styling */
-    .project-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 4-5 items per row */
-        gap: 20px; /* Space between items */
-    }
-
-    .project-card {
-        background-color: #f9f9f9;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .project-card:hover {
-        transform: translateY(-10px);
-    }
-
-    .project-image {
-        width: 100%;
-        height: 200px; /* Uniform height for images */
-        object-fit: cover;
-        border-radius: 10px;
-    }
-
-    .project-card .text h3 {
-        font-size: 1.1rem;
-        font-weight: bold;
-        margin-top: 10px;
-    }
-
-    .project-card .text p {
-        font-size: 0.9rem;
-        color: #555;
-    }
-</style>
 
 <div class="personal-info">
   <h2 class="section-title">About Me</h2>
