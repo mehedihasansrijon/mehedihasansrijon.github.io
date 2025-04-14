@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<title>Mehedi Hasan Srijon | Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Mehedi Hasan Srijon</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <!-- <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li> -->
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Mehedi Hasan Srijon</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'a Developer 👨‍💻',
+						'a Designer 🎨',
+       					'a Student 📚',
+       					'a Traveller ✈️',
+      					'a Coffee Lover ☕',
+						'an Innovator 🚀',
+						'a Problem Solver 🧩',
+						'a Tech Enthusiast 💻'
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+						<h2 class="title">An Experienced Android Software Developer</h2>
+						<h2 class="subtitle d-flex" style="margin-bottom: 0;">With over 3 years of hands-on experience</h2>						
+					    <br>
+						<p>
+							<a href="https://mehedihasansrijon.github.io/" class="btn btn-primary py-3 px-4" target="_blank">Google Play</a>
+						</p>
+						<!-- <a href="" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p> -->
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+										<div class="about-info">
+											<p><span class="title-s">Name: </span> <span>Mehedi Hasan Srijon</span></p>
+											<p><span class="title-s">Role: </span> <span>Android App Developer</span></p>
+											<p><span class="title-s">Experience: </span> <span>3 Years</span></p>
+											<p><span class="title-s">Company: </span> <span>Timely Technologies</span></p>
+										</div>																										
+									</div>
+								  </div>
+
+								  <div class="skill-mf">
+									<p class="title-s">Skills</p>
+									
+									<span>Java</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									
+									<span>XML</span> <span class="pull-right">92%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 92%;" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									
+									<span>HTML</span> <span class="pull-right">35%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 35%;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									
+									<span>PHP</span> <span class="pull-right">77%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 77%;" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									
+									<span>Dart</span> <span class="pull-right">83%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 83%;" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									
+									<span>Python</span> <span class="pull-right">45%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 45%;" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>								
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>Hi! I'm Mehedi Hasan Srijon, an Android App Developer with 3+ years of experience in Java programming. I have a passion for building user-friendly mobile apps with modern technologies like Firebase, MySQL, and SQLite.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Android App Developer</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Certified by <a href="https://bongoacademy.com/">Bongo Academy</a></span></li>
+									<li class="d-flex"><span>Language:</span> <span>Bangla, English</span></li>
+									<li class="d-flex"><span>BI Tools:</span> <span>Android Studio, VS Code, etc.</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Firebase, Design, Excel, Git & GitHub</span></li>
+								</ul>								
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="350">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.facebook.com/srijon.me" class="btn btn-primary py-3 px-3"  target="_blank" >Facebook</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Resume</h1>
+					<h2 class="mb-4">Resume</h2>
+					<p>Dedicated and skilled Android Developer with over 3 years of experience creating high-quality, user-focused mobile applications. Proficient in Java, Firebase, and Android Studio, with a strong background in building a wide variety of apps—from educational to lifestyle applications. A creative problem solver and self-driven learner, with a proven track record of completing over 350 projects and consistently delivering apps that meet user needs. Passionate about innovation and committed to producing reliable, efficient, and visually appealing mobile applications.</p>
+				</div>				  
+        </div>
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		  </div>
+		  <br>
+		  
+		  <div class="row">
+			<div class="col-md-6">
+			  <div class="resume-wrap ftco-animate">
+				<span class="date">2022-Present</span>
+				<h2>Android App Developer</h2>
+				<span class="position">Android Developer</span>
+				<p class="mt-4">Freelance Android Developer, Chuadanga, Dhaka, Bangladesh
+				  <ul>
+					<li>Developed and launched 350+ Android applications, focusing on user-friendly design, functionality, and performance.</li>
+					<li>Implemented scalable backend solutions using Firebase for real-time data synchronization and user authentication.</li>
+					<li>Maintained a 99%+ positive client feedback rating for consistent quality, timely delivery, and technical support.</li>
+				  </ul>
+				</p>
+			  </div>
+			</div>
+		  
+		  </div>
+		  
+		  <br>
+		  
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+					  <span class="date">2022</span>
+					  <h2>Zero to Hero in Android (Season 1)</h2>
+					  <span class="position">Completed extensive training in Android development, focusing on Java, XML, and Firebase integration.</span>
+					  <p class="mt-4">Grade: First Class Distinction</p>
+					</div>
+				  </div>
+				  
+				  <div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+					  <span class="date">2023</span>
+					  <h2>Zero to Hero in Android (Season 2)</h2>
+					  <span class="position">Advanced techniques in Android app design, API integration, and real-time database handling with Firebase and SQLite.</span>
+					  <p class="mt-4">Grade: First Class Distinction</p>
+					</div>
+				  </div>
+				  
+				  <div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+					  <span class="date">2024</span>
+					  <h2>Zero to Hero in Android (Season 3)</h2>
+					  <span class="position">Mastered app optimization, background services, custom views, and publishing production-ready apps to the Play Store.</span>
+					  <p class="mt-4">Grade: First Class Distinction</p>
+					</div>
+				  </div>				  
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2023-2024</span>
+    					<h2>Secondary School Certificate</h2>
+    					<span class="position">Aliarpur Aziz Secondary School</span>
+    					<p class="mt-4">Grade: </p>
+    				</div>
+				</div>
+    		</div>
+
+    		<!-- <div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div> -->
+    	</div>
+    </section>
+
+
+	<!-- My Achievements Section -->
+<div class="row">
+	<h1 class="big-4">My Achievements</h1>
+	<div class="underline"></div>
+  </div>
+  <br>
+  
+  <div class="row">
+	<div class="col-md-6 mb-3">
+	  <div class="resume-wrap p-4 ftco-animate">
+		<img src="images/Masud Rana Bhaiya.jpg" alt="Achievement 1" class="img-fluid rounded mb-3" style="max-height: 200px; object-fit: cover;">
+		<p class="mb-0">
+		  অষ্টম শ্রেনীতে পড়া এক কিশোর মেহেদি হাসান। নিজের উদ্ভাবনী চিন্তাশক্তি ও দক্ষতা দিয়ে গড়েছে 
+		  <strong>#চুয়াডাঙ্গা_অনলাইন_সেবা_অ্যাপস</strong>।
+		</p>
+	  </div>
+	</div>
+  
+	<div class="col-md-6 mb-3">
+	  <div class="resume-wrap p-4 ftco-animate">
+		<img src="images/Kutubpur High School.jpg" alt="Achievement 2" class="img-fluid rounded mb-3" style="max-height: 200px; object-fit: cover;">
+		<p class="mb-0">
+		  চুয়াডাঙ্গা সদরের কুতুবপুর মাধ্যমিক বিদ্যালয়ের ৮ম শ্রেণির শিক্ষার্থী 
+		  মেহেদী হাসান "Chuadanga Online Sheba" এপ তৈরি করায় সংবর্ধনা পায়।
+		</p>
+	  </div>
+	</div>
+  
+	<div class="col-md-6 mb-3">
+	  <div class="resume-wrap p-4 ftco-animate">
+		<img src="images/Akash Khobor News.jpg" alt="Achievement 3" class="img-fluid rounded mb-3" style="max-height: 200px; object-fit: cover;">
+		<p class="mb-0">
+		  কুতুবপুর মাধ্যমিক বিদ্যালয়ের অষ্টম শ্রেণীর ছাত্র, সাহসী একটি ছেলে, অল্প বয়সেই চমৎকার ধারণা।
+		</p>
+	  </div>
+	</div>
+  
+	<div class="col-md-6 mb-3">
+	  <div class="resume-wrap p-4 ftco-animate">
+		<img src="images/Gorbo Bangladesh News.jpg" alt="Achievement 4" class="img-fluid rounded mb-3" style="max-height: 200px; object-fit: cover;">
+		<p class="mb-0">
+		  কুতুবপুর মাধ্যমিক বিদ্যালয়ের অষ্টম শ্রেণীর ছাত্র, সাহসী একটি ছেলে, অল্প বয়সেই চমৎকার ধারণা।
+		</p>
+	  </div>
+	</div>
+  </div>  
+
+
+	<section class="ftco-section" id="project-section">
+		<div class="container">
+		  <div class="row justify-content-center mb-5 pb-5">
+			<div class="col-md-7 heading-section text-center ftco-animate">
+			  <h1 class="big big-2">Projects</h1>
+			  <h2 class="mb-4">My Android & Web Projects</h2>
+			  <p>These are some of the apps and tools I've built with Java, PHP, Firebase, and modern UI principles.</p>
+			</div>
+		  </div>
+
+		  <div class="row d-flex">
+			<!-- Android Cryptography -->
+			<div class="col-md-4 d-flex ftco-animate">
+			  <div class="blog-entry justify-content-end">
+				<a href="https://github.com/mehedihasansrijon/Android-Cryptography"
+				class="block-20 zoom-effect"
+				style="background-image: url('https://mehedihasansrijon.github.io/images/Android-Cryptography.png');"></a>							 
+				<div class="text mt-3 float-right d-block">
+				  <h3 class="heading"><a href="https://github.com/mehedihasansrijon/Android-Cryptography">Android Cryptography</a></h3>
+				  <p>Secure Android app for encrypting and decrypting messages using advanced cryptographic techniques.</p>
+				</div>
+			  </div>
+			</div>
+	  
+			<!-- Authentic Love -->
+			<div class="col-md-4 d-flex ftco-animate">
+			  <div class="blog-entry justify-content-end">
+				<a href="https://github.com/mehedihasansrijon/authentic-love"
+				class="block-20 zoom-effect"
+				style="background-image: url('https://mehedihasansrijon.github.io/images/Authentic%20Love.jpeg');"></a>							 
+				<div class="text mt-3 float-right d-block">
+				  <h3 class="heading"><a href="https://github.com/mehedihasansrijon/authentic-love">Authentic Love</a></h3>
+				  <p>Helps users explore meaningful relationships and emotional intelligence through a clean and intuitive Android app.</p>
+				</div>
+			  </div>
+			</div>
+	  
+			<!-- Academic Boi -->
+			<div class="col-md-4 d-flex ftco-animate">
+			  <div class="blog-entry justify-content-end">
+				<a href="https://github.com/mehedihasansrijon/Academic-Boi"
+				class="block-20 zoom-effect"
+				style="background-image: url('https://mehedihasansrijon.github.io/images/Academic%20Boi.jpg');"></a>
+			 <div class="text mt-3 float-right d-block">
+				  <h3 class="heading"><a href="https://github.com/mehedihasansrijon/Academic-Boi">Academic Boi</a></h3>
+				  <p>Bangladeshi student-focused ebook reader app with access to Class 1-12 textbooks in a clean and responsive layout.</p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+	  
+		  <div class="row d-flex justify-content-center mt-4">
+			<!-- Arabic-Bangla Dictionary -->
+			<div class="col-md-4 d-flex ftco-animate">
+			  <div class="blog-entry justify-content-end">
+				<a href="https://github.com/mehedihasansrijon/Arabic-Bangla-Dictionary"
+				class="block-20 zoom-effect"
+				style="background-image: url('https://mehedihasansrijon.github.io/images/Arabic-Bangla%20Dictionary.jpg');"></a>							 
+				<div class="text mt-3 float-right d-block">
+				  <h3 class="heading"><a href="https://github.com/mehedihasansrijon/Arabic-Bangla-Dictionary">Arabic-Bangla Dictionary</a></h3>
+				  <p>Offline dictionary app for quick Arabic ↔ Bangla translations, made lightweight and useful for students & scholars.</p>
+				</div>
+			  </div>
+			</div>
+	  
+			<!-- PHP Cryptography -->
+			<div class="col-md-4 d-flex ftco-animate">
+			  <div class="blog-entry justify-content-end">
+				<a href="https://github.com/mehedihasansrijon/PHP-Cryptography"
+				class="block-20 zoom-effect"
+				style="background-image: url('https://mehedihasansrijon.github.io/images/PHP%20Cryptography.png');"></a>
+			 	<div class="text mt-3 float-right d-block">
+				  <h3 class="heading"><a href="https://github.com/mehedihasansrijon/PHP-Cryptography">PHP Cryptography</a></h3>
+				  <p>Web-based data encryption & decryption tool built in PHP supporting multiple algorithms and user-friendly interface.</p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </section>
+	  
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+
+		<div class="row d-md-flex align-items-center">
+
+          <!-- <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="20">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div> -->
+
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="350">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="1000">0</strong>
+                <span>Mentored Students</span>
+              </div>
+            </div>
+          </div> -->
+
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="2800">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+					  <h2>Check out more projects on <span>GitHub</span></h2>
+					  <div class="heading">
+						<h4>Passionate about solving real-world problems &amp; discovering insights from data</h4>
+						<br>
+						<p>
+						  <a href="https://github.com/mehedihasansrijon" class="btn btn-primary py-3 px-5" target="_blank">Explore on GitHub</a>
+						</p>
+					  </div>
+					</div>
+				  </div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+			<p>I'm always open to new opportunities and conversations. Reach out if you have any questions, ideas, or projects you'd like to discuss!</p>
+		</div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:srijon.the.dreamer@gmail.com">srijon.the.dreamer@gmail.com</a></p>
+	          </div>
+          </div>
+           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-whatsapp"></span>
+          		</div>
+          		<h3 class="mb-4">Whatsapp</h3>
+	            <p><a href="https://wa.link/hzqwtf" target="_blank" >+8801959496164</a></p>
+	          </div>
+          </div> 
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>If you have any <span>Questions</span> or want to collaborate, <a href="https://wa.link/hzqwtf" class="btn btn-primary py-3 px-5" target="_blank">Feel free to reach out!</a></h2>
+				</div>
+			</div>
+				<br>
+				<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					<li class="ftco-animate normal-txt">Find me on</li>
+
+					<li class="ftco-animate"><a href="https://www.linkedin.com/in/mehedihasansrijon" target="_blank"><span class="icon-linkedin"></span></a></li>
+					<li class="ftco-animate"><a href="https://github.com/mehedihasansrijon" target="_blank"><span class="icon-github"></span></a></li>
+					<li class="ftco-animate"><a href="https://wa.link/hzqwtf" target="_blank"><span class="icon-whatsapp"></span></a></li>
+					<li class="ftco-animate"><a href="https://www.youtube.com/@mehedihasansrijon" target="_blank"><span class="icon-youtube"></span></a></li>
+					<li class="ftco-animate"><a href="https://facebook.com/srijon.me" target="_blank"><span class="icon-facebook"></span></a></li>
+					<li class="ftco-animate"><a href="https://www.instagram.com/mehedihasansrijon/" target="_blank"><span class="icon-instagram"></span></a></li>
+				  </ul>				  
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+ <footer class="ftco-footer ftco-section neon-footer">
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-12 text-center">
+		  <h2 class="footer-title">Thanks for Visiting!</h2>
+		  <p class="footer-text">Crafted with 💚 & endless coffee by <strong>Mehedi Hasan Srijon</strong></p>
+		  <p class="footer-text">Living to create, build & inspire through code and creativity.</p>
+		  <p class="footer-text">© <script>document.write(new Date().getFullYear());</script> Timely Technologies. All rights reserved.</p>
+		</div>
+	  </div>
+	</div>
+  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
