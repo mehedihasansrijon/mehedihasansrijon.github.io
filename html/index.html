@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Odyssey: 30-Day Mastery</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* Reset & body */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Roboto',sans-serif;}
+body{background:#0f0f0f;color:#fff;scroll-behavior:smooth;}
+
+/* Hero Section */
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:url('https://github.com/mehedihasansrijon/mehedihasansrijon.github.io/blob/master/images/html_thum.png') no-repeat center center/cover;
+  position:relative;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.6);
+}
+.hero-content{
+  position:relative; z-index:2;
+  animation:fadeIn 1.5s ease forwards;
+}
+.hero h1{
+  font-size:3rem; margin-bottom:20px;
+  background:linear-gradient(45deg,#ff3c78,#ffb347);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:slideDown 1s;
+}
+.hero p{
+  font-size:1.2rem;margin-bottom:30px;
+  animation:slideUp 1s;
+}
+.enroll-btn{
+  padding:15px 40px;font-size:1.2rem;font-weight:bold;color:#fff;
+  background:linear-gradient(270deg,#ff3c78,#ffb347,#ff3c78);
+  border:none;border-radius:50px;cursor:pointer;position:relative;
+  animation:gradientShift 4s ease infinite; transition:transform 0.3s,box-shadow 0.3s;
+}
+.enroll-btn:hover{transform:scale(1.1);box-shadow:0 0 25px #ff3c78;}
+
+/* Timeline */
+.timeline{padding:80px 20px;max-width:1200px;margin:0 auto;}
+.timeline h2{text-align:center;font-size:2.6rem;margin-bottom:50px;color:#ffb347;}
+.timeline-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;}
+.timeline-day{
+  background:rgba(255,255,255,0.05);padding:25px;border-radius:15px;
+  position:relative; opacity:0; transform:translateY(50px);
+  animation:fadeUp 0.8s forwards;
+  transition:0.5s;
+}
+.timeline-day:hover{transform:translateY(0) scale(1.05); box-shadow:0 0 25px #ff3c78;}
+.timeline-day h3{color:#ff3c78;margin-bottom:10px;}
+.timeline-day p{color:#ddd;line-height:1.5;}
+
+/* Footer */
+footer{padding:40px 20px;text-align:center;background:#111;color:#aaa;}
+
+/* Animations */
+@keyframes fadeUp{to{opacity:1; transform:translateY(0);}}
+@keyframes fadeIn{0%{opacity:0;}100%{opacity:1;}}
+@keyframes slideDown{0%{opacity:0; transform:translateY(-50px);}100%{opacity:1; transform:translateY(0);}}
+@keyframes slideUp{0%{opacity:0; transform:translateY(50px);}100%{opacity:1; transform:translateY(0);}}
+@keyframes gradientShift{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+
+/* Responsive */
+@media(max-width:768px){.hero h1{font-size:2.2rem;}}
+</style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>HTML Odyssey: 30-Day Mastery</h1>
+    <p>Master HTML from scratch & build stunning projects</p>
+    <a class="enroll-btn" href="https://wa.me/1234567890?text=Hi!%20I%20want%20to%20enroll%20in%20HTML%20Odyssey" target="_blank">Enroll Now</a>
+  </div>
+</section>
+
+<!-- Timeline Section -->
+<section class="timeline">
+  <h2>Course Roadmap: Day by Day</h2>
+  <div class="timeline-container">
+    <div class="timeline-day" style="animation-delay:0s;">
+      <h3>Day 1: HTML Basics</h3>
+      <p>Structure: &lt;!DOCTYPE&gt;, &lt;html&gt;, &lt;head&gt;, &lt;title&gt;, &lt;body&gt;. Comments: &lt;!-- comment --&gt;.</p>
+    </div>
+    <div class="timeline-day" style="animation-delay:0.1s;">
+      <h3>Day 2: Headings & Paragraphs</h3>
+      <p>&lt;h1&gt;-&lt;h6&gt;, &lt;p&gt;, &lt;br&gt;, &lt;hr&gt;, text formatting tags: &lt;b&gt;, &lt;strong&gt;, &lt;i&gt;, &lt;em&gt;, &lt;mark&gt;, &lt;sub&gt;, &lt;sup&gt;, &lt;small&gt;.</p>
+    </div>
+    <div class="timeline-day" style="animation-delay:0.2s;">
+      <h3>Day 3: Links & Images</h3>
+      <p>&lt;a&gt; links, &lt;img&gt; with alt, &lt;code&gt; &lt;pre&gt; for snippets.</p>
+    </div>
+    <div class="timeline-day" style="animation-delay:0.3s;">
+      <h3>Day 4: Lists</h3>
+      <p>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt; and nested lists.</p>
+    </div>
+    <div class="timeline-day" style="animation-delay:0.4s;">
+      <h3>Day 5: Mini Project</h3>
+      <p>“About Me” page combining all tags learned so far.</p>
+    </div>
+    <div class="timeline-day" style="animation-delay:0.5s;">
+      <h3>Days 6–8: Page Structure</h3>
+      <p>&lt;div&gt;, semantic tags: &lt;header&gt;, &lt;footer&gt;, &lt;section&gt;, &lt;article&gt;, inline vs block elements, &lt;span&gt;.</p>
+    </div>
+    <div class="timeline-day" style="animation-delay:0.6s;">
+      <h3>Days 9–11: Tables & Quotes</h3>
+      <p>&lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;, &lt;caption&gt;, &lt;blockquote&gt;, &lt;q&gt;, &lt;cite&gt;.</p>
+    </div>
+    <div class="timeline-day" style="animation-delay:0.7s;">
+      <h3>Days 12–15: Forms & Input</h3>
+      <p>&lt;form&gt;, &lt;input&gt; types: text, email, password, number, radio, checkbox, &lt;textarea&gt;, &lt;select&gt;. Form attributes: placeholder, required, maxlength, action, method.</p>
+    </div>
+    <div class="timeline-day" style="animation-delay:0.8s;">
+      <h3>Days 16–18: Media & Embeds</h3>
+      <p>&lt;img&gt; advanced, &lt;audio&gt;, &lt;video&gt;, &lt;iframe&gt; for YouTube & Google Maps.</p>
+    </div>
+    <div class="timeline-day" style="animation-delay:0.9s;">
+      <h3>Days 19–22: Styling Basics</h3>
+      <p>Inline CSS, internal CSS with &lt;style&gt;, colors, fonts, backgrounds, borders, hover effects.</p>
+    </div>
+    <div class="timeline-day" style="animation-delay:1s;">
+      <h3>Days 23–26: Advanced Styling</h3>
+      <p>CSS animations, transitions, flexbox, grid layouts, responsive design.</p>
+    </div>
+    <div class="timeline-day" style="animation-delay:1.1s;">
+      <h3>Days 27–30: Capstone Project</h3>
+      <p>Build a full portfolio page with header, bio, skills, achievements table, media, contact form. Use all learned concepts.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  &copy; 2025 Mehedi Hasan Srijon. All Rights Reserved.
+</footer>
+
+</body>
+</html>
